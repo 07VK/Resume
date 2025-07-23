@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu Koraganji | AI & Machine Learning Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Near-black background */
+            color: #a3a3a3; /* Light gray text */
+        }
+        .section-title, h1, h2, h3, .nav-link, .contact-link {
+            color: #fafafa; /* Off-white for titles and important text */
+        }
+        .nav-link:hover, .contact-link:hover {
+            color: #3acfed; /* Violet for hover */
+        }
+        .highlight-text {
+            color: #5cf6c8; /* Lighter violet */
+        }
+        .card {
+            background-color: #171717; /* Very dark gray */
+            border: 1px solid #262626; /* Dark border */
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #4c1d95; /* Darker violet on hover */
+        }
+        .skill-tag {
+            font-family: 'Source Code Pro', monospace;
+            background-color: #262626;
+            color: #d4d4d4;
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            background-color: #7c3aed;
+            color: #ffffff;
+        }
+        .btn-primary {
+            background-color: #7c3aed;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #6d28d9;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #404040;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #7c3aed;
+            border: 4px solid #171717;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50" style="background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px);">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold nav-link">Vishnu Koraganji</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="btn-primary font-medium py-2 px-4 rounded-lg">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black">
+            <a href="#about" class="block py-2 px-4 text-sm nav-link hover:bg-gray-900">About</a>
+            <a href="#projects" class="block py-2 px-4 text-sm nav-link hover:bg-gray-900">Projects</a>
+            <a href="#publications" class="block py-2 px-4 text-sm nav-link hover:bg-gray-900">Publications</a>
+            <a href="#experience" class="block py-2 px-4 text-sm nav-link hover:bg-gray-900">Experience</a>
+            <a href="#contact" class="block py-2 px-4 text-sm nav-link hover:bg-gray-900">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center">
+            <div class="w-full">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+                    AI & Machine Learning Engineer
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-light highlight-text mb-8">
+                    Building the Next Generation of Intelligent Systems.
+                </h2>
+                <p class="max-w-3xl text-lg md:text-xl mb-8">
+                    MS in Computer Science graduate with a passion for AI/ML, NLP, and Generative AI. My journey is driven by a deep curiosity to understand and build cutting-edge technologies from first principles. I thrive on solving complex problems and turning innovative ideas into production-ready systems.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="btn-primary font-bold py-3 px-6 rounded-lg text-lg">
+                        Explore My Work
+                    </a>
+                    <a href="#resume" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 text-lg">
+                        View My Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24">
+            <h2 class="section-title text-3xl font-bold mb-8 text-center">About Me</h2>
+            <div class="max-w-4xl mx-auto text-center text-lg">
+                <p class="mb-4">
+                    I'm a tech enthusiast who has just completed my Master's at Penn State. My academic journey has been a deep dive into the world of AI, but my real passion is in the hands-on process of building. For me, the most exciting part of this field is the constant learning—I love getting my hands dirty with new cutting-edge technologies, from agentic AI frameworks to decentralized systems, just to see how they work and what I can create with them.
+                </p>
+                <p class="mb-4">
+                    This curiosity has led me to tackle a wide range of projects, from applying deep learning to clinical medical data to building complex, multi-agent workflows. I've learned that I'm most motivated when I can take ownership of a problem end-to-end, from the initial data wrangling to deploying a functional, scalable service. I believe the best AI systems are built with a blend of rigorous engineering and a creative, first-principles approach to problem-solving.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24">
+            <h2 class="section-title text-3xl font-bold mb-12 text-center">Technical Skills</h2>
+            <div class="max-w-6xl mx-auto space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">GenAI & Agentic Systems</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag py-2 px-4 rounded-lg">RAG</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">LLM Fine-Tuning</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">LangChain</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">CrewAI</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">Transformer Models</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">Hugging Face</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">FAISS</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">PEFT (LoRA/QLoRA)</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Machine Learning & Deep Learning</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag py-2 px-4 rounded-lg">PyTorch</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">TensorFlow/Keras</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">Scikit-learn</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">Computer Vision (YOLOv8)</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">NLP</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">Recommender Systems</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">Information Retrieval</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Languages, Backend & DevOps</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag py-2 px-4 rounded-lg">Python</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">Java</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">SQL</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">React</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">Solidity</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">FastAPI</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">Docker</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">MLFlow</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">AWS</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">GCP</span>
+                        <span class="skill-tag py-2 px-4 rounded-lg">Git & CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24">
+            <h2 class="section-title text-3xl font-bold mb-12 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">AI Agentic Resume Tailor</h3>
+                    <p class="text-sm highlight-text mb-4">CrewAI, FastAPI, React, LangChain</p>
+                    <p class="mb-4">Developed a multi-agent system to automate resume tailoring, boosting ATS scores by 25-40%. Engineered a web scraping agent and a robust document processing pipeline, all served via a FastAPI backend.</p>
+                    <a href="https://github.com/07VK" target="_blank" class="font-medium nav-link">View Code <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">RAG Based QA Bot</h3>
+                    <p class="text-sm highlight-text mb-4">PyTorch, DistilBERT, FAISS, FastAPI</p>
+                    <p class="mb-4">Engineered a RAG chatbot for e-commerce using a 200k+ product dataset. Fine-tuned DistilBERT for sentiment analysis and used FAISS for efficient retrieval, achieving a 0.85 query relevance score.</p>
+                    <a href="https://github.com/07VK" target="_blank" class="font-medium nav-link">View Code <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Skin Cancer Detection System</h3>
+                    <p class="text-sm highlight-text mb-4">Python, TensorFlow, PyTorch, YOLOv8</p>
+                    <p class="mb-4">Developed a detection system using YOLOv8 and a novel SCSA Attention Module I designed from scratch. This improved model precision and recall by over 8% on the HAM10000 clinical dataset.</p>
+                    <a href="https://github.com/07VK" target="_blank" class="font-medium nav-link">View Code <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold mb-2">Decentralized File Storage System</h3>
+                    <p class="text-sm highlight-text mb-4">React JS, IPFS, Solidity, MetaMask</p>
+                    <p class="mb-4">Developed a web app for decentralized image upload and sharing via the blockchain. Leveraged Solidity for smart contracts and React for the frontend, storing file data on IPFS for distributed access.</p>
+                    <a href="https://github.com/07VK/Decentral-Drive" target="_blank" class="font-medium nav-link">View Code <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="py-24">
+            <h2 class="section-title text-3xl font-bold mb-12 text-center">Publications & Research</h2>
+            <div class="max-w-4xl mx-auto text-center mb-8">
+                <p class="text-lg">I'm proud to have contributed to the research community through first-author and collaborative publications. My work has focused on applying deep learning to solve real-world problems in geospatial analysis and intelligent systems.</p>
+                <a href="https://scholar.google.com/citations?hl=en&user=v4_WedMAAAAJ" target="_blank" class="inline-block mt-4 text-lg font-semibold highlight-text hover:underline">
+                    View my Google Scholar Profile <i class="fas fa-external-link-alt ml-1"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6">
+                    <p class="text-sm text-gray-400 mb-2">Springer | 2024</p>
+                    <h3 class="text-lg font-bold mb-3">Estimation & Analysis of Landslide Occurrence</h3>
+                    <p class="text-sm mb-4">Proposed a new method for estimating landslide-prone areas by integrating atmospheric and geographical data into a U-Net model, achieving 98% accuracy.</p>
+                    <a href="https://link.springer.com/article/10.1007/s11334-024-00578-x" target="_blank" class="font-medium nav-link">Read Paper <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <div class="card p-6">
+                    <p class="text-sm text-gray-400 mb-2">IEEE | 2023</p>
+                    <h3 class="text-lg font-bold mb-3">Framework for Intelligent Traffic Management System</h3>
+                    <p class="text-sm mb-4">Developed an IoT-based smart sensor system to monitor traffic and water levels in real-time, leveraging predictive analytics to prevent congestion and enhance road safety.</p>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10119413" target="_blank" class="font-medium nav-link">Read Paper <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+                <div class="card p-6">
+                    <p class="text-sm text-gray-400 mb-2">IEEE | 2023</p>
+                    <h3 class="text-lg font-bold mb-3">Detection & Prediction of Landslide Vulnerability</h3>
+                    <p class="text-sm mb-4">First-author paper implementing a U-Net model for landslide detection with 95% accuracy, using Sentinel satellite data and DInSAR techniques for land deformation monitoring.</p>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10061077" target="_blank" class="font-medium nav-link">Read Paper <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24">
+            <h2 class="section-title text-3xl font-bold mb-12 text-center">Experience</h2>
+            <div class="max-w-3xl mx-auto relative timeline pl-12">
+                <div class="mb-16">
+                    <div class="timeline-dot"></div>
+                    <p class="text-sm text-gray-400 mb-1">Sep 2023 - May 2025</p>
+                    <h3 class="text-xl font-bold">Graduate Teaching Assistant</h3>
+                    <p class="text-md text-gray-300 mb-2">Penn State University</p>
+                    <p>Mentored students in Data Structures & Algorithms, Computer Graphics, and Software Engineering. Reviewed final-year capstone projects, advising on project management and Agile methodologies, and provided detailed feedback on algorithmic complexity and code quality.</p>
+                </div>
+                <div class="mb-16">
+                    <div class="timeline-dot"></div>
+                    <p class="text-sm text-gray-400 mb-1">Mar 2022 - May 2022</p>
+                    <h3 class="text-xl font-bold">RPA Developer Intern</h3>
+                    <p class="text-md text-gray-300 mb-2">Blue Prism University</p>
+                    <p>Developed a customer enrollment automation for a health insurance use case using Blue Prism. Configured workflows with reusable objects and implemented error handling to reduce manual workloads and improve turnaround times.</p>
+                </div>
+                <div>
+                    <div class="timeline-dot"></div>
+                    <p class="text-sm text-gray-400 mb-1">Oct 2021 - Dec 2021</p>
+                    <h3 class="text-xl font-bold">Cloud Architect Intern</h3>
+                    <p class="text-md text-gray-300 mb-2">Amazon Web Services</p>
+                    <p>Gained foundational skills in provisioning and managing AWS services (EC2, S3, RDS). Designed and deployed cloud architectures using CloudFormation (Infrastructure as Code) and configured auto-scaling and IAM controls.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="py-24 text-center">
+            <h2 class="section-title text-3xl font-bold mb-4">My Resume</h2>
+            <p class="max-w-2xl mx-auto text-lg mb-8">
+                Interested in a more formal overview of my experience? You can download a PDF version of my resume here.
+            </p>
+            <a href="./Vishnu_Koraganji_Resume.pdf" download class="btn-primary font-bold py-4 px-8 rounded-lg text-xl">
+                <i class="fas fa-download mr-2"></i> Download CV
+            </a>
+        </section>
+    </main>
+
+    <!-- Contact Section -->
+    <footer id="contact" class="bg-black mt-20">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h2 class="section-title text-3xl font-bold mb-4">Let's Connect</h2>
+            <p class="max-w-2xl mx-auto text-lg mb-8">
+                I'm actively seeking new graduate opportunities in AI and Machine Learning. If you think I'd be a good fit for your team, I'd love to hear from you.
+            </p>
+            <div class="flex justify-center space-x-8 text-3xl">
+                <a href="mailto:vishnukoraganji369@gmail.com" class="contact-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/07VK" target="_blank" class="contact-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?hl=en&user=v4_WedMAAAAJ" target="_blank" class="contact-link" aria-label="Google Scholar">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 py-6">
+            <p class="text-center text-sm text-gray-500">&copy; 2025 Vishnu Koraganji. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
