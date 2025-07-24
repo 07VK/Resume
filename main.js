@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const cursorDot = document.getElementById('cursor-dot');
     const header = document.getElementById('inner-header');
     const sectionContainer = document.getElementById('section-container');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
     let currentSectionId = 'home';
 
     // Custom cursor logic
@@ -9,6 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
         cursorDot.style.left = `${e.clientX}px`;
         cursorDot.style.top = `${e.clientY}px`;
     });
+
+    // Mobile menu toggle
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
 
     // A global function to be accessed by onclick attributes in index.html
     window.showSection = function(sectionId) {
@@ -29,7 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 50);
         }
 
-        // Update active nav link
+        // Close mobile menu if it's open
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Update active nav link for desktop
         const navLinksToUpdate = document.querySelectorAll('#nav-links a');
         navLinksToUpdate.forEach(link => {
             link.classList.toggle('active', link.dataset.section === sectionId);
@@ -43,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         about: `
             <section id="about" class="content-section pt-32" style="background-color: var(--section-bg-about);">
                 <div class="container mx-auto px-6 py-16 reveal">
-                    <h2 class="section-heading text-4xl font-bold text-center mb-16">About Me</h2>
+                    <h2 class="section-heading text-3xl md:text-4xl font-bold text-center mb-16">About Me</h2>
                     <div class="max-w-4xl mx-auto space-y-12">
                         <div class="reveal">
                             <h3 class="text-2xl font-bold nav-link-dark mb-4">Personal Summary</h3>
@@ -78,27 +92,27 @@ document.addEventListener('DOMContentLoaded', function() {
         skills: `
             <section id="skills" class="content-section pt-32" style="background-color: var(--section-bg-skills);">
                 <div class="container mx-auto px-6 py-16 reveal">
-                    <h2 class="section-heading text-4xl font-bold text-center mb-16">Technical Skills</h2>
+                    <h2 class="section-heading text-3xl md:text-4xl font-bold text-center mb-16">Technical Skills</h2>
                     <div class="max-w-6xl mx-auto space-y-10">
-                        <div class="card p-8 rounded-lg reveal">
+                        <div class="card p-6 md:p-8 rounded-lg reveal">
                             <h3 class="text-xl font-semibold nav-link-dark mb-4">Languages & Databases</h3>
                             <div class="flex flex-wrap gap-2">
                                 ${['Python', 'Java', 'C', 'JavaScript', 'SQL', 'React', 'R', 'PostgreSQL', 'Firebase', 'ChromaDB', 'Git'].map(skill => `<span class="bg-slate-200 text-slate-700 font-medium px-2.5 py-1 rounded-md">${skill}</span>`).join('')}
                             </div>
                         </div>
-                        <div class="card p-8 rounded-lg reveal" style="transition-delay: 0.1s;">
+                        <div class="card p-6 md:p-8 rounded-lg reveal" style="transition-delay: 0.1s;">
                             <h3 class="text-xl font-semibold nav-link-dark mb-4">Machine Learning & Deep Learning</h3>
                             <div class="flex flex-wrap gap-2">
                                 ${['PyTorch', 'TensorFlow/Keras', 'Pandas', 'Scikit-learn', 'NLTK', 'MLFlow', 'DVC', 'Classification', 'Clustering', 'Regression', 'Recommender Systems', 'Information Retrieval', 'NLP', 'Statistics', 'Computer Vision', 'Time Series Forecasting', 'CNN', 'RNN', 'YOLO', 'Machine Learning', 'Ranking and Searching'].map(skill => `<span class="bg-blue-100 text-blue-800 font-medium px-2.5 py-1 rounded-md">${skill}</span>`).join('')}
                             </div>
                         </div>
-                        <div class="card p-8 rounded-lg reveal" style="transition-delay: 0.2s;">
+                        <div class="card p-6 md:p-8 rounded-lg reveal" style="transition-delay: 0.2s;">
                             <h3 class="text-xl font-semibold nav-link-dark mb-4">Generative AI</h3>
                             <div class="flex flex-wrap gap-2">
                                 ${['Transformer models', 'BERT', 'GPT', 'Gemini', 'Llama', 'RAG', 'PEFT (LoRA & QLoRA)', 'Fine-Tuning', 'LLM', 'Langchain', 'CrewAI', 'Hugging Face', 'Sentiment Transformers', 'FAISS', 'FastAPI'].map(skill => `<span class="bg-purple-100 text-purple-800 font-medium px-2.5 py-1 rounded-md">${skill}</span>`).join('')}
                             </div>
                         </div>
-                            <div class="card p-8 rounded-lg reveal" style="transition-delay: 0.3s;">
+                            <div class="card p-6 md:p-8 rounded-lg reveal" style="transition-delay: 0.3s;">
                             <h3 class="text-xl font-semibold nav-link-dark mb-4">MLOps, Tools & Coursework</h3>
                             <div class="flex flex-wrap gap-2">
                                 ${['MLOps', 'Docker-Containers', 'CI/CD/CT', 'AWS', 'GCP', 'VS Code', 'Eclipse', 'Ollama', 'Ngrok', 'ArcGIS/QGIS', 'AI/ML', 'DSA & OS', 'Algorithms Analysis', 'DBMS & Data Analytics'].map(skill => `<span class="bg-green-100 text-green-800 font-medium px-2.5 py-1 rounded-md">${skill}</span>`).join('')}
@@ -111,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
         experience: `
             <section id="experience" class="content-section pt-32" style="background-color: var(--section-bg-experience);">
                 <div class="container mx-auto px-6 py-16 reveal">
-                    <h2 class="section-heading text-4xl font-bold text-center mb-16">Experience</h2>
+                    <h2 class="section-heading text-3xl md:text-4xl font-bold text-center mb-16">Experience</h2>
                     <div class="max-w-4xl mx-auto space-y-8">
                         <div class="experience-card card rounded-lg p-6 reveal">
                             <p class="text-sm text-violet-800 font-medium">Sep 2023 - May 2025</p>
@@ -159,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
         work: `
             <section id="work" class="content-section pt-32" style="background-color: var(--section-bg-work);">
                 <div class="container mx-auto px-6 py-16 reveal">
-                    <h2 class="section-heading text-4xl font-bold text-center mb-16">Work & Research</h2>
+                    <h2 class="section-heading text-3xl md:text-4xl font-bold text-center mb-16">Work & Research</h2>
                     <div class="max-w-4xl mx-auto space-y-16">
                         <div>
                             <h3 class="text-2xl font-bold nav-link-dark mb-8 text-center uppercase tracking-wider">PROJECTS</h3>
@@ -187,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
         resume: `
             <section id="resume" class="content-section pt-32" style="background-color: var(--section-bg-resume);">
                     <div class="container mx-auto px-6 py-16 flex flex-col items-center justify-center reveal">
-                    <h2 class="section-heading text-4xl font-bold mb-4 text-center">My Resume</h2>
+                    <h2 class="section-heading text-3xl md:text-4xl font-bold mb-4 text-center">My Resume</h2>
                     <p class="text-slate-600 mb-8 max-w-lg mx-auto text-center">Get the full details of my skills, experience, and qualifications. Download the PDF version to see everything in one place.</p>
                     <div class="w-full max-w-4xl p-2 bg-white rounded-lg shadow-2xl border border-slate-200">
                         <img src="https://placehold.co/850x1100/f0f9ff/1e293b?text=Resume+Preview" 
@@ -205,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <section id="contact" class="content-section pt-32" style="background-color: var(--section-bg-contact);">
                 <div class="container mx-auto px-6 py-16 flex items-center justify-center reveal" style="min-height: calc(100vh - 96px);">
                     <div class="max-w-2xl w-full text-center">
-                        <h2 class="section-heading text-4xl font-bold mb-4">Let's Connect</h2>
+                        <h2 class="section-heading text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
                         <p class="text-slate-600 mb-12">I'm actively seeking new graduate opportunities. If you think I'd be a good fit for your team, I'd love to hear from you.</p>
                         <div class="flex justify-center space-x-8 text-4xl">
                             <a href="mailto:vishnukoraganji369@gmail.com" class="transition-transform duration-300 hover:scale-110" aria-label="Email"><i class="fas fa-envelope" style="color: #DB4437;"></i></a>

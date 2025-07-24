@@ -5,49 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishnu Koraganji | AI & Machine Learning Engineer</title>
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Your Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
 
+    <!-- Custom Cursor -->
     <div class="cursor-dot" id="cursor-dot"></div>
 
+    <!-- Main Container -->
     <main>
+        <!-- Home Section (Landing Page) -->
         <section id="home" class="flex flex-col items-center justify-center h-screen text-center p-6">
             <div class="reveal visible">
-                <h1 class="home-heading text-5xl md:text-6xl font-bold nav-link-dark">VISHNU KORAGANJI</h1>
-                <p class="mt-4 text-xl md:text-2xl accent-text font-semibold">AI & Machine Learning Engineer</p>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                <h1 class="home-heading text-4xl md:text-6xl font-bold nav-link-dark">VISHNU KORAGANJI</h1>
+                <p class="mt-4 text-lg md:text-2xl accent-text font-semibold">AI & Machine Learning Engineer</p>
+                <p class="mt-4 text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
                     MS in Computer Science graduate with a passion for AI/ML, NLP, and Generative AI. My journey is driven by a deep curiosity to understand and build cutting-edge technologies from first principles.
                 </p>
             </div>
 
             <div class="mt-12 flex flex-wrap justify-center gap-4 md:gap-6">
-                <div onclick="showSection('about')" class="group circular-btn w-32 h-32 flex flex-col items-center justify-center rounded-full cursor-pointer transition-all duration-300 reveal visible" style="animation-delay: 0.2s;">
-                    <i class="icon fas fa-user text-3xl accent-text mb-2"></i><span class="font-semibold">About</span>
+                <div onclick="showSection('about')" class="group circular-btn w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-full cursor-pointer transition-all duration-300 reveal visible" style="animation-delay: 0.2s;">
+                    <i class="icon fas fa-user text-2xl md:text-3xl accent-text mb-2"></i><span class="font-semibold text-sm md:text-base">About</span>
                 </div>
-                <div onclick="showSection('skills')" class="group circular-btn w-32 h-32 flex flex-col items-center justify-center rounded-full cursor-pointer transition-all duration-300 reveal visible" style="animation-delay: 0.4s;">
-                    <i class="icon fas fa-cogs text-3xl accent-text mb-2"></i><span class="font-semibold">Skills</span>
+                <div onclick="showSection('skills')" class="group circular-btn w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-full cursor-pointer transition-all duration-300 reveal visible" style="animation-delay: 0.4s;">
+                    <i class="icon fas fa-cogs text-2xl md:text-3xl accent-text mb-2"></i><span class="font-semibold text-sm md:text-base">Skills</span>
                 </div>
-                <div onclick="showSection('experience')" class="group circular-btn w-32 h-32 flex flex-col items-center justify-center rounded-full cursor-pointer transition-all duration-300 reveal visible" style="animation-delay: 0.6s;">
-                    <i class="icon fas fa-briefcase text-3xl accent-text mb-2"></i><span class="font-semibold">Experience</span>
+                <div onclick="showSection('experience')" class="group circular-btn w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-full cursor-pointer transition-all duration-300 reveal visible" style="animation-delay: 0.6s;">
+                    <i class="icon fas fa-briefcase text-2xl md:text-3xl accent-text mb-2"></i><span class="font-semibold text-sm md:text-base">Experience</span>
                 </div>
-                <div onclick="showSection('work')" class="group circular-btn w-32 h-32 flex flex-col items-center justify-center rounded-full cursor-pointer transition-all duration-300 reveal visible" style="animation-delay: 0.8s;">
-                    <i class="icon fas fa-flask text-3xl accent-text mb-2"></i><span class="font-semibold">Work</span>
+                <div onclick="showSection('work')" class="group circular-btn w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-full cursor-pointer transition-all duration-300 reveal visible" style="animation-delay: 0.8s;">
+                    <i class="icon fas fa-flask text-2xl md:text-3xl accent-text mb-2"></i><span class="font-semibold text-sm md:text-base">Work</span>
                 </div>
-                 <div onclick="showSection('resume')" class="group circular-btn w-32 h-32 flex flex-col items-center justify-center rounded-full cursor-pointer transition-all duration-300 reveal visible" style="animation-delay: 1s;">
-                    <i class="icon fas fa-file-arrow-down text-3xl accent-text mb-2"></i><span class="font-semibold">Resume</span>
+                 <div onclick="showSection('resume')" class="group circular-btn w-28 h-28 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-full cursor-pointer transition-all duration-300 reveal visible" style="animation-delay: 1s;">
+                    <i class="icon fas fa-file-arrow-down text-2xl md:text-3xl accent-text mb-2"></i><span class="font-semibold text-sm md:text-base">Resume</span>
                 </div>
             </div>
         </section>
 
+        <!-- Header for inner sections -->
         <header id="inner-header" class="fixed top-0 left-0 right-0 z-50 transition-transform duration-300 -translate-y-full">
             <div class="container mx-auto px-6 py-4" style="background: var(--nav-bg); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; box-shadow: 0 8px 20px rgba(0,0,0,0.07); border-radius: 0 0 1.5rem 1.5rem;">
                 <nav class="flex justify-between items-center">
@@ -56,8 +64,9 @@
                             <circle cx="12" cy="12" r="9" stroke="var(--name-color)" stroke-width="1" fill="none"/>
                             <text x="50%" y="53%" dominant-baseline="middle" text-anchor="middle" font-family="Playfair Display, serif" font-size="9" font-weight="700" fill="var(--name-color)">VK</text>
                         </svg>
-                        <span class="header-name text-2xl font-bold">VISHNU KORAGANJI</span>
+                        <span class="header-name text-xl md:text-2xl font-bold">VISHNU KORAGANJI</span>
                     </a>
+                    <!-- Desktop Navigation -->
                     <div class="hidden md:flex space-x-8" id="nav-links">
                         <a onclick="showSection('about')" data-section="about" class="nav-link font-semibold text-slate-500 transition-colors cursor-pointer">About</a>
                         <a onclick="showSection('skills')" data-section="skills" class="nav-link font-semibold text-slate-500 transition-colors cursor-pointer">Skills</a>
@@ -66,13 +75,30 @@
                         <a onclick="showSection('resume')" data-section="resume" class="nav-link font-semibold text-slate-500 transition-colors cursor-pointer">Resume</a>
                         <a onclick="showSection('contact')" data-section="contact" class="nav-link font-semibold text-slate-500 transition-colors cursor-pointer">Contact</a>
                     </div>
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-slate-700 focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
                 </nav>
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4">
+                    <a onclick="showSection('about')" data-section="about" class="block py-3 px-4 text-slate-600 hover:bg-slate-100 rounded-md cursor-pointer">About</a>
+                    <a onclick="showSection('skills')" data-section="skills" class="block py-3 px-4 text-slate-600 hover:bg-slate-100 rounded-md cursor-pointer">Skills</a>
+                    <a onclick="showSection('experience')" data-section="experience" class="block py-3 px-4 text-slate-600 hover:bg-slate-100 rounded-md cursor-pointer">Experience</a>
+                    <a onclick="showSection('work')" data-section="work" class="block py-3 px-4 text-slate-600 hover:bg-slate-100 rounded-md cursor-pointer">Work</a>
+                    <a onclick="showSection('resume')" data-section="resume" class="block py-3 px-4 text-slate-600 hover:bg-slate-100 rounded-md cursor-pointer">Resume</a>
+                    <a onclick="showSection('contact')" data-section="contact" class="block py-3 px-4 text-slate-600 hover:bg-slate-100 rounded-md cursor-pointer">Contact</a>
+                </div>
             </div>
         </header>
 
+        <!-- A container where JavaScript will inject the section content -->
         <div id="section-container"></div>
     </main>
 
+    <!-- Your Custom JavaScript -->
     <script src="main.js"></script>
 </body>
 </html>
