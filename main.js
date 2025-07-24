@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 alt="Preview of Vishnu Koraganji's Resume"
                                 class="w-full rounded-md">
                     </div>
-                    <a href="Vishnu_Koraganji.pdf" target="_blank" class="mt-8 inline-block bg-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
+                    <a href="./Vishnu_Koraganji.pdf" target="_blank" class="mt-8 inline-block bg-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
                         <i class="fas fa-download mr-2"></i> Download CV
                     </a>
                 </div>
