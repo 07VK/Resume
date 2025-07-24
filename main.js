@@ -7,10 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSectionId = 'home';
 
     // Custom cursor logic
-    window.addEventListener('mousemove', e => {
-        cursorDot.style.left = `${e.clientX}px`;
-        cursorDot.style.top = `${e.clientY}px`;
-    });
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        window.addEventListener('mousemove', e => {
+            cursorDot.style.left = `${e.clientX}px`;
+            cursorDot.style.top = `${e.clientY}px`;
+        });
+    } else {
+        cursorDot.style.display = 'none';
+    }
+
 
     // Mobile menu toggle
     if (mobileMenuButton && mobileMenu) {
