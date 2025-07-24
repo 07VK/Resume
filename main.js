@@ -210,8 +210,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h2 class="section-heading text-3xl md:text-4xl font-bold mb-4 text-center">My Resume</h2>
                     <p class="text-slate-600 mb-8 max-w-lg mx-auto text-center">Get the full details of my skills, projects, work and qualifications. Download the PDF version to see everything in one place.</p>
                     <div class="w-full max-w-4xl p-2 bg-white rounded-lg shadow-2xl border border-slate-200">
-                        <img src="/Vishnu_Koraganji.jpg" 
-                                onerror="this.onerror=null;this.src='/Vishnu_Koraganji.jpg'"
+                        <img src="./Vishnu_Koraganji.jpg" 
+                                onerror="this.onerror=null;this.src='./Vishnu_Koraganji.jpg'"
                                 alt="Preview of Vishnu Koraganji's Resume"
                                 class="w-full rounded-md">
                     </div>
