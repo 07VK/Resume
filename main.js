@@ -210,12 +210,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h2 class="section-heading text-3xl md:text-4xl font-bold mb-4 text-center">My Resume</h2>
                     <p class="text-slate-600 mb-8 max-w-lg mx-auto text-center">Get the full details of my skills, projects, work and qualifications. Download the PDF version to see everything in one place.</p>
                     <div class="w-full max-w-4xl p-2 bg-white rounded-lg shadow-2xl border border-slate-200">
-                        <img src="https://github.com/07VK/Resume/Vishnu_Koraganji.jpg" 
-                                onerror="this.onerror=null;this.src='C:/Users/K.V. VISHNU/Desktop/deskk/APPLICATION/Resumes/Vishnu_Koraganji.jpg'"
+                        <img src="https://github.com/07VK/Resume/blob/main/Vishnu_Koraganji.jpg" 
+                                onerror="this.onerror=null;this.src='https://github.com/07VK/Resume/blob/main/Vishnu_Koraganji.jpg'"
                                 alt="Preview of Vishnu Koraganji's Resume"
                                 class="w-full rounded-md">
                     </div>
-                    <a href="https://github.com/07VK/Resume/Vishnu_Koraganji.pdf" target="_blank" class="mt-8 inline-block bg-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
+                    <a href="https://github.com/07VK/Resume/blob/main/Vishnu_Koraganji.pdf" target="_blank" class="mt-8 inline-block bg-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transform hover:-translate-y-1">
                         <i class="fas fa-download mr-2"></i> Download CV
                     </a>
                 </div>
