@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="max-w-4xl mx-auto space-y-8">
                         <div class="experience-card card rounded-lg p-6 reveal">
                             <p class="text-sm text-violet-800 font-medium">Sep 2023 - May 2025</p>
-                            <h3 class="text-xl font-bold mt-1 nav-link-dark">Graduate Teaching Assistant</h3>
+                            <h3 class="text-xl font-bold mt-1 nav-link-dark">Graduate Assistant</h3>
                             <p class="text-md text-slate-700">Penn State University</p>
                             <p class="text-slate-500 text-sm mt-2 font-light italic">Hover to view description</p>
                             <div class="description text-slate-600">
