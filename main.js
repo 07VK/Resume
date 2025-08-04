@@ -139,10 +139,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             <p class="text-slate-500 text-sm mt-2 font-light italic">Hover to view description</p>
                             <div class="description text-slate-600">
                                 <ul class="list-disc pl-5 space-y-2">
-                                    <li>Graded for Capstone Projects, Data Structures & Algorithms, Computer Graphics, Software Engineering, and Calculus.</li>
-                                    <li>Reviewed 10+ undergraduate capstone projects weekly, advised on software project management, and collaborated with faculty on grading standards.</li>
-                                    <li>Guided teams on Agile and SDLC best practices in Software Engineering, evaluated Unity tasks (3D models, textures,
-                                        rendering) in Computer Graphics, and refined grading rubrics/syllabi using UML and use-case diagrams</li>
+                                    <li>Collaborated with faculty on applied AI research in medical imaging; designed and implemented a integrated pipeline for YOLO-SCSA model; demonstrated LLM fine-tuning vs RAG capabilities using SLMs.</li>
+                                    <li>Mentored and evaluated 10+ undergraduate capstone projects in Software Engineering and Computer Science, advising on Agile/SDLC best practices and project management using UML and use-case diagrams.</li>
+                                    <li>Assisted in instruction for Data Structures & Algorithms by grading assignments and providing detailed feedback on algorithmic complexity, optimization, and evaluated Unity tasks: 3d Models, Textures and Rendering in Computer Graphics, and refined grading rubrics/syllabi.</li>
                                 </ul>
                             </div>
                         </div>
