@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="reveal">
                             <h3 class="text-2xl font-bold nav-link-dark mb-4">Personal Summary</h3>
                             <div class="text-slate-600 text-lg leading-relaxed space-y-4">
-                                <p>I'm a Founding AI Engineer at ClearChartAI, where I'm building HIPAA-compliant medical RAG platforms that process clinical patient records. My work involves architecting intelligent document pipelines for healthcare using GCP's Vertex AI, Document AI, and Gemini to build systems that understand medical records, extract clinical entities, and deliver fast, accurate retrieval for patient queries.</p>
+                                <p>I'm a Full Stack Engineer at ClearChartAI, where I build HIPAA-compliant medical AI platforms end-to-end — from React front ends to RAG pipelines, CommonWell/TEFCA interoperability, and Zero-Trust security on GCP. My work spans architecting intelligent document pipelines for healthcare using GCP's Vertex AI Vector Search and Gemini, exchanging records across the national health network (FHIR R4), and delivering fast, accurate, source-cited retrieval for patient queries.</p>
                                 <p>Previously, I completed my Master's at Penn State University, diving deep into AI/ML, NLP, and Generative AI. My passion lies in the hands-on process of building — taking complex ideas and turning them into production systems from the ground up. I've spent my career building everything from multi-agent workflows to computer vision models, and I love owning projects end-to-end from the first line of code to final deployment.</p>
                                 <p>My real hobby is diving headfirst into the latest in AI — news, blogs, papers, open-source work. I'm the person who gets genuinely excited about a new framework release or a groundbreaking research paper. For me, learning isn't just for classes — I believe in getting involved straight down to the bottom with cutting-edge technologies like agentic AI, new LLMs, and their applications just to see how they work and what I can build with them. That constant curiosity is what made me intrigue to AI.</p>
                             </div>
@@ -119,9 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                         </div>
                         <div class="card p-6 md:p-8 rounded-lg reveal" style="transition-delay: 0.3s;">
-                            <h3 class="text-xl font-semibold nav-link-dark mb-4">MLOps, Cloud & Tools</h3>
+                            <h3 class="text-xl font-semibold nav-link-dark mb-4">MLOps, Cloud & Interoperability</h3>
                             <div class="flex flex-wrap gap-2">
-                                ${['MLOps', 'Docker-Containers', 'CI/CD', 'GCP', 'Vertex AI', 'Document AI', 'Cloud Run', 'AWS', 'EC2', 'S3', 'RDS', 'VPC', 'HIPAA Compliance', 'VS Code', 'Eclipse', 'Ollama', 'Ngrok', 'ArcGIS/QGIS', 'AI/ML', 'DSA & OS', 'Algorithms Analysis', 'DBMS & Data Analytics'].map(skill => `<span class="bg-green-100 text-green-800 font-medium px-2.5 py-1 rounded-md">${skill}</span>`).join('')}
+                                ${['MLOps', 'Docker', 'CI/CD', 'GCP', 'Vertex AI', 'Cloud Run', 'Cloud Functions', 'AWS', 'EC2', 'S3', 'HIPAA Compliance', 'FHIR R4', 'CommonWell/TEFCA', 'HL7', 'mTLS/JWT', 'Ollama', 'Ngrok', 'ArcGIS/QGIS'].map(skill => `<span class="bg-green-100 text-green-800 font-medium px-2.5 py-1 rounded-md">${skill}</span>`).join('')}
                             </div>
                         </div>
                     </div>
@@ -135,15 +135,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="max-w-4xl mx-auto space-y-8">
                         <div class="experience-card card rounded-lg p-6 reveal" style="border-left: 4px solid var(--accent-cyan);">
                             <p class="text-sm text-cyan-700 font-medium">Aug 2025 - Present</p>
-                            <h3 class="text-xl font-bold mt-1 nav-link-dark">Founding AI Engineer</h3>
+                            <h3 class="text-xl font-bold mt-1 nav-link-dark">Full Stack Engineer</h3>
                             <p class="text-md text-slate-700">ClearChartAI <span class="text-slate-500">• Remote</span></p>
                             <p class="text-slate-500 text-sm mt-2 font-light italic">Hover to view description</p>
                             <div class="description text-slate-600">
                                 <ul class="list-disc pl-5 space-y-2">
-                                    <li>Architected <strong>HIPAA-compliant</strong> medical RAG platform on GCP using Document AI + Gemini 2.0 hybrid approach for processing clinical patient records including lab reports, discharge summaries, and consultation notes.</li>
-                                    <li>Built intelligent document chunking pipeline with medical entity recognition, dosage pattern extraction, and clinical abbreviation handling, optimizing retrieval for patient record queries.</li>
-                                    <li>Configured full GCP backend infrastructure: Vertex AI Vector Search, Document AI processors, Cloud Run deployments, with proper dev/staging/prod environment separation and BAA compliance.</li>
-                                    <li>Implemented hybrid retrieval using FAISS + Vertex AI embeddings with Cohere Rerank 3, achieving <strong>0.85+ cosine similarity</strong> on medical queries with <strong>&lt;3s response latency</strong>.</li>
+                                    <li>Architected and deployed a <strong>HIPAA-compliant</strong> medical AI platform end-to-end (React/Vite front end, <strong>FastAPI</strong> on Cloud Run, Gen2 Cloud Functions) on GCP, serving source-cited <strong>RAG</strong> Q&A over patients' longitudinal health records with <strong>sub-2s</strong> streaming responses.</li>
+                                    <li>Built the document-ingestion and retrieval pipeline (<strong>Gemini Vision</strong> extraction, semantic chunking, <strong>Vertex AI Vector Search</strong> over 768-dim embeddings) and led a <strong>zero-downtime</strong> migration of 3 microservices to the google-genai SDK, re-indexing <strong>731 vectors</strong>.</li>
+                                    <li>Engineered <strong>CommonWell / TEFCA</strong> health-information-exchange interoperability (mTLS, RS256 JWTs, <strong>FHIR R4</strong>) with <strong>IAL2</strong> identity verification, enabling patient-directed record retrieval across the U.S. national health network.</li>
+                                    <li>Implemented a <strong>7-layer Zero-Trust</strong> security model — MFA/AAL2 (TOTP), JWT validation, and HIPAA audit logging across all PHI endpoints — meeting <strong>NIST 800-63B</strong> requirements.</li>
                                 </ul>
                             </div>
                         </div>
@@ -182,6 +182,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="container mx-auto px-6 py-16 reveal">
                     <h2 class="section-heading text-3xl md:text-4xl font-bold text-center mb-16">Work & Research</h2>
                     <div class="max-w-4xl mx-auto space-y-16">
+                        <div class="reveal">
+                            <h3 class="text-2xl font-bold nav-link-dark mb-8 text-center uppercase tracking-wider">Featured</h3>
+                            <div class="card p-6 md:p-8 rounded-lg reveal" style="border: 1px solid var(--accent-cyan); box-shadow: 0 14px 40px rgba(0,0,0,0.10);">
+                                <div class="flex items-center justify-between flex-wrap gap-2 mb-1">
+                                    <h3 class="text-2xl font-bold nav-link-dark">ClearChartAI — Patient-Owned Medical AI Platform</h3>
+                                    <span class="text-xs font-bold px-3 py-1 rounded-full" style="background: var(--accent-cyan); color: #fff; letter-spacing: 0.05em;">LIVE · PRODUCTION</span>
+                                </div>
+                                <p class="text-sm font-medium" style="color: var(--accent-cyan);">React, FastAPI, GCP (Vertex AI, Cloud Run, Cloud Functions), Gemini, CommonWell/TEFCA, FHIR R4</p>
+                                <p class="mt-3 text-slate-600 leading-relaxed">A <strong>HIPAA-compliant</strong> platform that gives patients one place to own their whole medical history. Built end-to-end: a source-cited <strong>RAG</strong> pipeline over patients' longitudinal records (Gemini Vision extraction → semantic chunking → Vertex AI vector search), <strong>CommonWell/TEFCA</strong> interoperability for patient-directed retrieval across the U.S. national health network, a <strong>7-layer Zero-Trust</strong> security model (MFA/AAL2, JWT, HIPAA audit logging), and the React front end — all the way to deployment.</p>
+                                <a href="https://clearchartai.io" target="_blank" class="font-medium nav-link-dark hover:accent-text mt-4 inline-block">Visit Product <i class="fas fa-arrow-right ml-1"></i></a>
+                            </div>
+                        </div>
                         <div>
                             <h3 class="text-2xl font-bold nav-link-dark mb-8 text-center uppercase tracking-wider">PROJECTS</h3>
                             <div class="grid grid-cols-1 gap-8">
